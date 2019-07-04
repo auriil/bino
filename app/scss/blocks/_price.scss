@@ -1,0 +1,177 @@
+.price {
+  margin: 152px 0;
+
+  .divider::after, .divider::before {
+    background-color: #999999;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 29px;
+    margin: 20px 0;
+    text-align: center;
+    color: $text-color;
+  }
+
+  .price__title {
+    color: $text-color-dark;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .price__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 45px;
+  }
+
+  .price__element {
+    flex-basis: 32.4%;
+    margin-top: 20px;
+    background-color: $white-gray;
+
+    &:hover {
+
+      .price__top {
+        background-color: $primary;
+      }
+
+      .price__bottom {
+
+        .price__btn {
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        .price__number {
+
+          p {
+            color: $primary;
+          }
+
+        }
+
+      }
+
+    }
+
+    .price__top {
+      background-color: $text-color-dark;
+      padding-bottom: 95px;
+      transition-duration: 500ms;
+      transition-property: background-color;
+
+      .price__name {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+        padding: 40px 0;
+      }
+
+    }
+
+    .price__bottom {
+      padding-bottom: 20px;
+
+      .price__number {
+        width: 165px;
+        height: 165px;
+        background-color: $white;
+        border: 10px solid rgba(244, 245, 249, 0.25);
+        border-radius: 50%;
+        margin: -86px auto 0;
+        padding: 46px 0;
+        background-clip: padding-box;
+
+        p {
+          font-size: 39px;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          line-height: 40px;
+          margin: 0;
+          color: $text-color-dark;
+          transition-duration: 500ms;
+          transition-property: color;
+
+          span {
+            display: block;
+            font-size: 13px;
+            line-height: 21px;
+            font-weight: 400;
+            color: $text-color-dark;
+          }
+
+        }
+
+      }
+
+      .price__list {
+        text-align: center;
+        margin: 40px 0;
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 14px;
+          line-height: 20px;
+          margin: 20px 0;
+          font-weight: 600;
+          color: $text-color-dark;
+        }
+
+      }
+
+      .price__btn {
+        @include button() {
+          width: 145px;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.12px;
+          padding: 13px 0;
+          display: block;
+          margin: 30px auto;
+          font-weight: 600;
+          background-color: $text-color;
+          border-color: $text-color;
+          transition-duration: 500ms;
+          transition-property: background-color;
+        };
+      }
+
+    }
+
+  }
+
+  .price__element--red {
+
+    .price__top {
+      background-color: $primary;
+    }
+
+    .price__bottom {
+
+      .price__number {
+
+        p {
+          color: $primary;
+        }
+
+      }
+
+      .price__btn {
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+    }
+
+  }
+
+}
