@@ -1,0 +1,157 @@
+.case-study {
+  background-color: $white-gray;
+  padding: 125px 0;
+
+  p {
+    font-size: 14px;
+    line-height: 29px;
+    margin: 20px 0;
+    text-align: center;
+    color: $text-color;
+  }
+
+  .divider::after, .divider::before {
+    background-color: #999999;
+  }
+
+  .case-study__title {
+    color: $text-color-dark;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .case-study__block {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .case-study__left {
+    flex-basis: 665px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .case-study__right {
+
+    img {
+      margin-left: -80px;
+    }
+
+  }
+}
+
+.ideas {
+  background-color: $white;
+  box-shadow: 0 3px 5px rgba(0,0,0,.1);
+  padding: 26px 50px 124px;
+  box-sizing: border-box;
+
+  .ideas__icon {
+    width: 127px;
+    height: 127px;
+    background-color: $primary;
+    margin: 50px auto;
+    position: relative;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+    img, svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      fill: $white;
+      width: 35px;
+      height: 40px;
+    }
+
+  }
+
+  .ideas__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-color-dark;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      width: 41px;
+      height: 1px;
+      background-color: #888888;
+      border-bottom: 1px solid #e1e1e1;
+      display: block;
+      margin: 22px auto 0;
+    }
+
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    color: $text-color;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.05px;
+  }
+
+  a {
+    @include button();
+    width: 145px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.12px;
+    padding: 13px 0;
+    display: block;
+    margin: 40px auto 0;
+    font-weight: 600;
+  }
+
+}
+
+@media (max-width: 980px) {
+
+  .case-study {
+    padding: 50px 0;
+
+    .case-study__left {
+      flex-basis: 50%;
+      padding: 30px;
+    }
+
+    .case-study__right {
+      flex-basis: 50%;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .case-study {
+
+    .case-study__block {
+      flex-direction: column;
+    }
+
+    .case-study__left {
+      padding: 20px;
+    }
+
+    .case-study__right {
+      margin-top: 30px;
+    }
+
+  }
+
+}

@@ -1,6 +1,10 @@
 .recent {
   margin-top: 154px;
 
+  .divider::after, .divider::before {
+    background-color: #999999;
+  }
+
   > p {
     font-size: 14px;
     line-height: 29px;
@@ -50,7 +54,7 @@
   .recent__item {
     flex-basis: 25%;
     position: relative;
-    height: 475px;
+    max-height: 475px;
 
     img {
       display: block;
